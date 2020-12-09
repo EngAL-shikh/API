@@ -4,6 +4,11 @@ class News
 {
 
 
+  public $Art_title;
+  public  $Art_subject;
+  public $Art_image;
+  public $sub_cat;
+
 
 public $database;
 
@@ -49,6 +54,8 @@ function getRows(){
     
     
 }
+    
+    
 
 
 
@@ -67,23 +74,61 @@ function NewsType($type){
 }
     
     
+
     
-    function addRow($data){
-        
-        
-    }
+    
     
      function updateRow($id){
+           $pdo=$this->database->connect();
+         try{
+
+        $stmt=  $pdo->prepare("UPDATE news set Art_title='amroz',Art_subject='amroz',Art_image='amroz',Art_date=now(),sub_sub_cat_id=11 where id=?");
+         $stmt->execute([$id]);
+        
+  
+        
+             
+   }catch(PDOException $e){
+   return false;
+       }
         
         
     }
     
-         function deleteRow($id){
-        
-        
+    
+    
+    
+    //deleted
+   public function deleteNews($id)
+    {
+         try{
+             
+      $pdo=$this->database->connect();
+      $stmt=  $pdo->prepare("DELETE FROM news WHERE  ID=?");
+   
+       return $stmt->execute([$id]);
+          }catch(PDOException $e){
+             return false;
+                  }
     }
     
     
+    function addRow()
+ {
+   try{
+     $pdo=$this->database->connect();
+     $qury='insert into news values(null,?,?,?,now(),?)';
+    $stmt=  $pdo->prepare($qury);
+    $stmt->execute([$this->Art_title,$this->Art_subject,$this->Art_image,$this->sub_cat]);
+  return true;
 }
+    catch(PDOException $e){
+return false;
+    }
+    
+    
+}}
+    
+
 
  ?>
