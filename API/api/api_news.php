@@ -20,7 +20,7 @@ if(isset( $_SERVER['REQUEST_METHOD'])){
         
         
             if ($news_model->addRow()) {
-            echo "news added successfuly ^_9";
+            echo "news added successfuly";
             } else {
             echo "filed to add news !!";
         }
@@ -45,7 +45,7 @@ if ($method == "DELETE") {
     if ($news_model->deleteNews($_GET['id'])) {
         echo "news deleted successfuly";
     } else {
-        echo "filed to delete news !!";
+        echo "filed to delete news ";
     }
 
 

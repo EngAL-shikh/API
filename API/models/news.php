@@ -19,7 +19,7 @@ function __construct()
 
 }
 
-
+//select
 function getRows(){
 
 	$pdo=$this->database->connect();
@@ -76,7 +76,7 @@ function NewsType($type){
     
 
     
-    
+    //update
     
      function updateRow($id){
            $pdo=$this->database->connect();
@@ -113,6 +113,7 @@ function NewsType($type){
     }
     
     
+//insert
     function addRow()
  {
    try{
