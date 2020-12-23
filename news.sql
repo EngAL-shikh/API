@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2020 at 04:55 PM
+-- Generation Time: Dec 23, 2020 at 01:49 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -62,14 +62,9 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `Art_title`, `Art_subject`, `Art_image`, `Art_date`, `sub_sub_cat_id`) VALUES
-(1, 'Lorem Ipsum', 'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard', 'news.png', '2020-11-19', 11),
-(2, 'Where can I get some?', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,', 'news.png', '2020-11-13', 13),
-(3, 'Contrary', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClin', 'image.png', '2020-11-19', 14),
-(4, 'Where can I get some?', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,', 'news.png', '2020-11-13', 13),
-(5, 'Contrary', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClin', 'image.png', '2020-11-19', 14),
-(6, 'mirder', ' adf jaldfj ljadl;jf ;j df;lk', 'adf.png', '2020-11-04', 14),
-(8, 'amroz', 'amroz', 'adf.ppg', '2020-11-03', 30),
-(9, 'animle', 'akjdhfjkl', 'animle.png', '2020-11-10', 32);
+(14, 'news1', 'news1news1news1news1news1news1news1news1news1news1news1news1news1', 'image', '2020-12-09', 27),
+(15, 'news2', 'news2news2news2news2news2news2news2', 'image2', '2020-12-09', 12),
+(16, 'news3', 'news2news2news2news2', 'image3', '2020-12-16', 32);
 
 -- --------------------------------------------------------
 
@@ -146,7 +141,7 @@ ALTER TABLE `news`
 --
 ALTER TABLE `sub_cat_news`
   ADD PRIMARY KEY (`sub_cat_id`),
-  ADD KEY `sub_cat_news_ibfk_1` (`cat_id`);
+  ADD KEY `cat_id` (`cat_id`);
 
 --
 -- Indexes for table `sub_sub_cat_news`
@@ -169,7 +164,7 @@ ALTER TABLE `cat_news`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `sub_cat_news`

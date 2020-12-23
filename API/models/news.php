@@ -19,7 +19,7 @@ function __construct()
 
 }
 
-//select
+
 function getRows(){
 
 	$pdo=$this->database->connect();
@@ -32,7 +32,7 @@ function getRows(){
     
     $stat->execute();
     
-    return $stat->fetchAll(PDO::FETCH_OBJ);
+    return (object) array("getAllRows"=>$stat->fetchAll(PDO::FETCH_OBJ));
     
     
 }
@@ -69,16 +69,29 @@ function NewsType($type){
     
     $stat->execute([$type]);
     
-    return $stat->fetchAll(PDO::FETCH_OBJ);
+    return (object) array("gettypeRows"=>$stat->fetchAll(PDO::FETCH_OBJ));
+
+    
     
 }
     
     
+    
+    
 
+   function CatType(){
+
+    $pdo=$this->database->connect();
     
-    //update
+   $stat= $pdo->prepare("SELECT cat_news.cat_title,sub_cat_news.sub_cat_title,sub_sub_cat_news.sub_sub_cat_title FROM cat_news,sub_cat_news,sub_sub_cat_news WHERE sub_sub_cat_news.sub_cat_id=sub_cat_news.sub_cat_id AND sub_cat_news.cat_id=cat_news.cat_id");
     
-     function updateRow($id){
+    $stat->execute();
+    return (object) array("getCattypeRows"=>$stat->fetchAll(PDO::FETCH_OBJ));
+ 
+} 
+    
+    
+    function updateRow($id){
            $pdo=$this->database->connect();
          try{
 
@@ -97,7 +110,6 @@ function NewsType($type){
     
     
     
-    
     //deleted
    public function deleteNews($id)
     {
@@ -113,7 +125,6 @@ function NewsType($type){
     }
     
     
-//insert
     function addRow()
  {
    try{
@@ -128,8 +139,13 @@ return false;
     }
     
     
-}}
+}
     
+}
+
+
+
+
 
 
  ?>
