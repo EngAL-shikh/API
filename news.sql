@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 23, 2020 at 01:49 PM
+-- Generation Time: Dec 27, 2020 at 09:36 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -62,9 +62,13 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `Art_title`, `Art_subject`, `Art_image`, `Art_date`, `sub_sub_cat_id`) VALUES
-(14, 'news1', 'news1news1news1news1news1news1news1news1news1news1news1news1news1', 'image', '2020-12-09', 27),
-(15, 'news2', 'news2news2news2news2news2news2news2', 'image2', '2020-12-09', 12),
-(16, 'news3', 'news2news2news2news2', 'image3', '2020-12-16', 32);
+(14, 'yemen killed ', 'Think you call tell the truth from lies? Test your knowledge of fake news with this game, Factitious. Click and choose quick start to start playing.\r\nThink you call tell the truth from lies? Test your knowledge of fake news with this game, Factitious. Click and choose quick start to start playing.\r\nThink you call tell the truth from lies? Test your knowledge of fake news with this game, Factitious. Click and choose quick start to start playing.\r\nThink you call tell the truth from lies? Test your knowledge of fake news with this game, Factitious. Click and choose quick start to start playing.', 'image', '2020-12-09', 27),
+(15, 'us killed people', 'This article in The New York Times challenges readers to identify which social media posts have been created by Russian operatives. The differences between real and fake posts are subtle. ', 'image2', '2020-12-09', 12),
+(16, 'ronalndo', 'news2news2news2news2', 'image3', '2020-12-16', 32),
+(17, 'that code', 'that code doesn\'t support negative values, it will throw a NumberFormatException. To fix that, and allow the MIN to be negative, use the following code.', 'image', '2020-12-09', 14),
+(18, 'following code.', 'that code doesn\'t support negative values, it will throw a NumberFormatException. To fix that, and allow the MIN to be negative, use the ', 'image', '2020-12-17', 11),
+(19, 'negative, use the ', 'that code doesn\'t support negative values, it will throw a NumberFormatException. To fix that, and allow the MIN to be  that code doesn\'t support negative values, it will throw a NumberFormatException. To fix that, and allow the MIN to be ', 'image', '2020-12-16', 30),
+(20, 'the MIN to be ', 'that code doesn\'t support negative values, it will throw a NumberFormatException. To fix that, and allow that code doesn\'t support negative values, it will throw a NumberFormatException. To fix that, and allow that code doesn\'t support negative values, it will throw a NumberFormatException. To fix that, and allow ', 'image', '2020-12-23', 31);
 
 -- --------------------------------------------------------
 
@@ -164,7 +168,7 @@ ALTER TABLE `cat_news`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `sub_cat_news`
